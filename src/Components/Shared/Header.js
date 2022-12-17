@@ -1,9 +1,11 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-gray-900 px-32">
+            <div className="navbar bg-gray-900 px-32 py-5">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,17 +31,24 @@ const Header = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <p className="normal-case text-xl font-bold rounded-xl bg-yellow-400 p-2">MovieDB</p>
+
+                    <p className="normal-case text-xl font-bold rounded-md bg-yellow-400 p-2">MovieDB</p>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className=" mx-auto hidden lg:flex">
 
                     <div className="form-control">
-                        <input type="text" placeholder="Search" className="w-96 input input-bordered" />
+                        <input type="text" placeholder="Search" className="w-96 h-8 rounded-sm input input-bordered" />
                     </div>
 
                 </div>
                 <div className="navbar-end">
+                    <div className='mr-10 h-8 p-2 rounded-sm btn'>
+                        <FontAwesomeIcon icon={faBookmark} />
+                        <p className='ml-3 font-bold'>Watchlist</p>
+                    </div>
                     <a className="btn">Get started</a>
+
+
                 </div>
             </div>
         </div>
