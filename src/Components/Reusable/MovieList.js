@@ -2,12 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import MovieCard from './MovieCard';
 
-const MovieList = () => {
+const MovieList = ({ selected}) => {
 
     const { data: movies = [] } = useQuery({
         queryKey: ['movies'],
         queryFn: () =>
-            fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=6d47a4eb4a550f0aec87d70e03ce12ae').then(res =>
+            fetch(`https://api.themoviedb.org/3/trending${selected}/day?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res =>
                 res.json()
             )
     })
