@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
-const Switch = ({items}) => {
+const Switch = ({items, onToggle}) => {
     const [isToggled, setToggle]= useState(false);
 
     const [item1Width , setItem1Width]= useState();
@@ -15,6 +15,7 @@ const Switch = ({items}) => {
 
     const activeText = 'text-black'
 
+    onToggle(isToggled?items[1]:items[0])
 
     return (
         <div className='flex items-center h-8 border-solid border-blue-900 rounded-3xl text-white font-semibold border-2 relative z-[1]'>
