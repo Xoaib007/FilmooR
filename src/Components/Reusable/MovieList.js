@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 
 const MovieList = () => {
 
-    const { movies } = useQuery({
+    const { data: movies = [] } = useQuery({
         queryKey: ['movies'],
         queryFn: () =>
           fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=6d47a4eb4a550f0aec87d70e03ce12ae').then(res =>
