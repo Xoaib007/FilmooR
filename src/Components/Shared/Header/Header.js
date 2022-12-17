@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark} from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
+import SearchBar from './SearchBar';
 
 const Header = () => {
+    
     return (
         <div>
             <div className="navbar bg-gray-900 px-32 py-5">
@@ -34,13 +36,9 @@ const Header = () => {
 
                     <p className="normal-case text-xl font-bold rounded-md bg-yellow-400 p-2">MovieDB</p>
                 </div>
-                <div className=" mx-auto hidden lg:flex">
 
-                    <div className="form-control flex flex-row">
-                        <input type="text" placeholder="Search" className="w-96 h-8 rounded-sm input input-bordered" />
-                    </div>
-
-                </div>
+               <SearchBar/>
+               
                 <div className="navbar-end">
 
                     <div className='mr-10 h-8 p-2 rounded-sm btn'>
