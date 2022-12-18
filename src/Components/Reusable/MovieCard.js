@@ -7,7 +7,7 @@ const MovieCard = ({ imageUrl, title, rating, voteCount }) => {
         <div className='mb-20 text-white bg-gray-900 rounded-xl relative'>
             <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${imageUrl}`} alt='' />
             <div className='w-[180px] text-left p-4'>
-                <p className=' text-left text-xl font-bold rounded-t-xl'>{title}</p>
+                <p className=' text-left font-bold rounded-t-xl'>{title}</p>
                 <div className='mt-3'>
                     <p className='font-semibold'>{rating}</p>
                     <p>{voteCount}</p>
