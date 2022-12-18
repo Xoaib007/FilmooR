@@ -16,7 +16,7 @@ const MovieList = ({fetch}) => {
     return (
         <div className='flex gap-7 overflow-x-auto pb-10'>
             {
-                movies?.results?.map((movie, i) =>
+                movies?.results?.map((movie) =>
                     <MovieCard
                         key={movie.id}
                         {...movie}
