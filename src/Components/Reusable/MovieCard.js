@@ -1,16 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faBookmark} from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-regular-svg-icons'
 import React from 'react';
 
 const MovieCard = ({ imageUrl, title, rating, voteCount }) => {
     return (
-        <div className='mb-20 text-white bg-gray-900 rounded-xl relative'>
+        <div className='mb-20 h-[490px] text-white bg-gray-900 rounded-xl relative'>
             <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${imageUrl}`} alt='' />
             <div className='w-[180px] text-left p-4'>
-                <p className=' text-left font-bold rounded-t-xl'>{title}</p>
+                <p className=' text-left text-lg font-bold rounded-t-xl h-16'>{title}</p>
                 <div className='mt-3'>
-                    <p className='font-semibold'>{rating}</p>
-                    <p>{voteCount}</p>
+                <div className='flex'>
+                    <FontAwesomeIcon className='mt-1 mr-2' icon={ faStar }/>
+                    <p className='text-lg font-semibold'>{rating}<span className='text-sm font-normal text-gray-400 '>/10</span></p>
+                </div>
+                    <p className='text-sm font-normal text-gray-400 ml-7'>{voteCount}</p>
                 </div>
             </div>
             

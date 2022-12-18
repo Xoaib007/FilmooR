@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import TMDB from '../../api/TMDB';
 import MovieCard from './MovieCard';
 
-const MovieList = ({selected}) => {
+const MovieList = () => {
 
     const [movies, setMovie] = useState([]);
     useEffect(()=>{
         const fetchMovie = async()=>{
-           const {data}= await TMDB.get({selected})
+           const {data}= await TMDB.get('movie/upcoming')
            setMovie(data)
         }
         fetchMovie()

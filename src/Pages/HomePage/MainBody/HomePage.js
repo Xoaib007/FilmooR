@@ -4,22 +4,19 @@ import MovieList from '../../../Components/Reusable/MovieList';
 
 const HomePage = () => {
     const [selected, setSelected] = useState('');
-    
-    const handleToggle = (selected) =>{
-        if(selected === 'on TV'){
-            setSelected('movie/upcoming')
-        }
-        // else{
-        //     setSelected('tv/on_the_air')
-        // }
+
+    const handleToggle = (selected) => {
+
     }
 
     return (
         <div className='min-h-screen px-32'>
             <Section title='Whats New' items={['on TV', 'in theatre']} onToggle={handleToggle}>
-                <MovieList selected={selected}/>
+                <MovieList selected={selected} />
             </Section>
         </div>
+
+
     );
 };
 
