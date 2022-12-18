@@ -29,3 +29,17 @@ code {
   background: rgb(219, 219, 219);
   border-radius: 30px;
 }
+
+.logo-container{
+  width: 70px;
+  height: 50px;
+  border-radius: 70% 40% 30%  80% / 55% 45% 60% 50%;
+  background: rgb(250 204 21 / var(--tw-bg-opacity));
+
+}
+.logo {
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  margin-top: 5%;
+}

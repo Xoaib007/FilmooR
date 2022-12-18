@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark} from '@fortawesome/free-solid-svg-icons'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import SearchBar from './SearchBar';
 
 const Header = () => {
-    
+
     return (
         <div>
             <div className="navbar bg-gray-900 px-32 py-5">
@@ -33,12 +33,14 @@ const Header = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
+                    <div className='logo-container'>
+                        <p className="logo">Film<span className='text-white'>ooR</span></p>
+                    </div>
 
-                    <p className="normal-case text-xl font-bold rounded-md bg-yellow-400 p-2">MovieDB</p>
                 </div>
 
-               <SearchBar/>
-               
+                <SearchBar />
+
                 <div className="navbar-end">
 
                     <div className='mr-10 h-8 p-2 rounded-sm btn'>
