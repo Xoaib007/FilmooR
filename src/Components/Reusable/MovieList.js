@@ -19,11 +19,7 @@ const MovieList = ({fetch}) => {
                 movies?.results?.map((movie, i) =>
                     <MovieCard
                         key={movie.id}
-                        id={movie.id}
-                        title={movie.title}
-                        imageUrl={movie.poster_path}
-                        rating={movie.vote_average}
-                        voteCount={movie.vote_count}
+                        {...movie}
                     />
 
                 )
