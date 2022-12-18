@@ -18,7 +18,7 @@ const HomePage = () => {
 
     return (
         <div className='min-h-screen px-32'>
-            <Section title='Whats New' items={['On TV', 'in theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='On TV'?false:true}>
+            <Section title='Whats New' items={['On TV', 'In Theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='On TV'?false:true}>
                 <MovieList fetch={selected.first}/>
             </Section>
         </div>
