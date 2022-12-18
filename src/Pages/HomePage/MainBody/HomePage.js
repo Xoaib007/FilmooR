@@ -9,13 +9,18 @@ const HomePage = () => {
         third: 'Today'
     });
 
-    const handleToggle = (selected) => {
-        console.log(selected);
+    const handleToggle = (section, selected) => {
+        setSelected(prev=>{
+            return{
+                ...prev,
+                section: selected
+            }
+        });
     }
 
     return (
         <div className='min-h-screen px-32'>
-            <Section title='Whats New' items={['On TV', 'in theatre']} onToggle={handleToggle} isToggled={selected.first==='On TV'?false:true}>
+            <Section title='Whats New' items={['On TV', 'in theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='On TV'?false:true}>
                 <MovieList />
             </Section>
         </div>
