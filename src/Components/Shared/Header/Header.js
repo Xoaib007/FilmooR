@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import SearchBar from './SearchBar';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -33,10 +34,11 @@ const Header = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <div className='logo-container'>
-                        <p className="logo">Film<span className='text-white'>ooR</span></p>
-                    </div>
-
+                    <Link to='/'>
+                        <div className='logo-container'>
+                            <p className="logo">Film<span className='text-white'>ooR</span></p>
+                        </div>
+                    </Link>
                 </div>
 
                 <SearchBar />
