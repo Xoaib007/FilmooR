@@ -10,12 +10,10 @@ const HomePage = () => {
     });
 
     const handleToggle = (section, selected) => {
-        setSelected(prev=>{
-            return{
-                ...prev,
-                section: selected
-            }
-        });
+        setSelected(prev=>({
+            ...prev,
+               [section]: selected
+        }));
     }
 
     return (
