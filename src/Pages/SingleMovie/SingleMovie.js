@@ -5,7 +5,7 @@ const SingleMovie = () => {
     const movie = useLoaderData();
 
     return (
-        <div>
+        <div className='min-h-screen text-white'>
             <p>{movie.title}</p>
         </div>
     );
