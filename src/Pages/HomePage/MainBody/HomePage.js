@@ -6,7 +6,12 @@ const HomePage = () => {
     const [selected, setSelected] = useState('');
     
     const handleToggle = (selected) =>{
-        
+        if(selected === 'on TV'){
+            setSelected('movie/upcoming')
+        }
+        // else{
+        //     setSelected('tv/on_the_air')
+        // }
     }
 
     return (
