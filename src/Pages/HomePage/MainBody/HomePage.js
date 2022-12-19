@@ -9,6 +9,12 @@ const HomePage = () => {
         third: 'Today'
     });
 
+    const [selectedTrending] = useState({
+        first: 'Day',
+        second: 'Week',
+        third: 'Today'
+    });
+
     const handleToggle = (section, selected) => {
         setSelected(prev=>({
             ...prev,
@@ -23,7 +29,7 @@ const HomePage = () => {
             </Section>
 
             <Section title='Trending Now' items={['Day', 'Week']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='Day'?false:true}>
-                <MovieList fetch={selected.first}/>
+                <MovieList fetch={selectedTrending.first}/>
             </Section>
         </div>
 
