@@ -21,6 +21,10 @@ const HomePage = () => {
             <Section title='Whats Popular' items={['On TV', 'In Theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='On TV'?false:true}>
                 <MovieList fetch={selected.first}/>
             </Section>
+
+            <Section title='Trending Now' items={['Day', 'Week']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='Day'?false:true}>
+                <MovieList fetch={selected.first}/>
+            </Section>
         </div>
 
 
