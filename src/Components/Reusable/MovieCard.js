@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const MovieCard = ({ poster_path, title,vote_average,name, vote_count, id }) => {
 
     return (
-
         <div className=' h-[490px] text-white bg-gray-900 rounded-xl relative'>
             <Link to={`/movie/${id}`}>
                 <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${poster_path}`} alt='' />
