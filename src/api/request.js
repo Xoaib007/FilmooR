@@ -1,6 +1,8 @@
 export const request = {
     "On TV": "/tv/popular",
     "In Theatre": "/movie/popular",
-    "Day": "/trending/movie/day",
-    "Week": "/trending/movie/week"
+    "Today": "/trending/movie/day",
+    "This Week": "/trending/movie/week",
+    "TV Show": "/tv/top_rated",
+    "Movies": "/movie/top_rated"
 }
