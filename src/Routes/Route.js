@@ -18,9 +18,9 @@ const router= createBrowserRouter([
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         },
         {
-            path: '/movie/:id',
+            path: '/tv/:id',
             element: <SingleMovie/>,
-            loader: ({params}) => fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
+            loader: ({params}) => fetch(`https://api.themoviedb.org/3/tv/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         }
     ]
 }
