@@ -48,9 +48,9 @@ const HomePage = () => {
                 <MovieList fetch={selected.third} />
             </Section>
 
-            {/* <Section title='Top Rated' items={['Movies','TV Show']} onToggle={handleToggle.bind(null, 'fifth')} isToggled={selected.fifth === 'Movies' ? false : true}>
+            <Section title='Top Rated' items={['Movies','TV Show']} onToggle={handleToggle.bind(null, 'fifth')} isToggled={selected.fifth === 'Movies' ? false : true}>
                 <MovieList fetch={selected.fifth} />
-            </Section> */}
+            </Section>
         </div>
 
 
