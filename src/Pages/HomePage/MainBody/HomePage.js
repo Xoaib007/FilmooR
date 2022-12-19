@@ -8,8 +8,8 @@ const HomePage = () => {
         second: 'On TV',
         third: 'Today',
         forth: 'This Week',
-        fifth: 'TV Show',
-        sixth: 'Movies'
+        fifth: 'Movies',
+        sixth: 'TV Show'
     });
 
     const handleToggle = (section, selected) => {
@@ -48,7 +48,7 @@ const HomePage = () => {
                 <MovieList fetch={selected.third} />
             </Section>
 
-            <Section title='Top Rated' items={['TV Show', 'Movies']} onToggle={handleToggle.bind(null, 'fifth')} isToggled={selected.fifth === 'TV Show' ? false : true}>
+            <Section title='Top Rated' items={['Movies','TV Show']} onToggle={handleToggle.bind(null, 'fifth')} isToggled={selected.fifth === 'Movies' ? false : true}>
                 <MovieList fetch={selected.fifth} />
             </Section>
         </div>
