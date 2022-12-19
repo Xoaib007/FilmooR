@@ -9,7 +9,7 @@ const HomePage = () => {
         third: 'Today'
     });
 
-    const [selectedTrending] = useState({
+    const [selectedTrending,setSelectedTrending] = useState({
         first: 'Day',
         second: 'Week',
         third: 'Today'
@@ -22,13 +22,20 @@ const HomePage = () => {
         }));
     }
 
+    const handleToggle2 = (section, selected) => {
+        setSelectedTrending(prev=>({
+            ...prev,
+               [section]: selected
+        }));
+    }
+
     return (
         <div className='min-h-screen mx-32'>
             <Section title='Whats Popular' items={['On TV', 'In Theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='On TV'?false:true}>
                 <MovieList fetch={selected.first}/>
             </Section>
 
-            <Section title='Trending Now' items={['Day', 'Week']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first==='Day'?false:true}>
+            <Section title='Trending Now' items={['Day', 'Week']} onToggle={handleToggle2.bind(null, 'first')} isToggled={selectedTrending.first==='Day'?false:true}>
                 <MovieList fetch={selectedTrending.first}/>
             </Section>
         </div>
