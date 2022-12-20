@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
-const UsersReview = ({id}) => {
+const UsersReview = ({ id }) => {
 
     const { data: reviews = [] } = useQuery({
         queryKey: ['reviews'],
@@ -13,8 +13,21 @@ const UsersReview = ({id}) => {
     return (
         <div>
             {
-                slicedReviews?.map(review=>
-                    <p>{review.content.slice(0,500)}...</p>
+                slicedReviews?.map(review =>
+                    <div key={review.id} className='mt-10 bg-gray-900 p-4'>
+                        <div className='flex'>
+                            <img className='h-10 w-10 rounded-full' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${review.author_details.avatar_path}`} alt=''/>
+                            <p className='text-2xl ml-5'>@{review.author_details.username} <span className='text-sm'>{review.author_details.name}</span></p>
+                        </div>
+                        <div tabIndex={0} className="collapse text-lg text-left">
+                            <div className="collapse-title font-medium">
+                                {review.content.slice(0, 100)}...
+                            </div>
+                            <div className="collapse-content">
+                                <p>{review.content}</p>
+                            </div>
+                        </div>
+                    </div>
                 )
             }
         </div>
