@@ -22,11 +22,14 @@ const SingleMovie = () => {
             <div className='flex justify-between mt-10 '>
 
                 <div className='w-1/2 text-left'>
-                    {
-                        movie?.genres?.map(genre=>
-                        <p>{genre.name}</p>
-                        )
-                    }
+                    <div className='flex mb-4'>
+                        {
+                            movie?.genres?.map(genre =>
+                                <p className='border-2 border-yellow-400 rounded-2xl px-2 px-auto mx-2'>{genre.name}</p>
+                            )
+                        }
+                    </div>
+
                     <p className=' text-5xl font-bold mb-10'>{movie.title}</p>
                     <p>{movie.overview}</p>
 
