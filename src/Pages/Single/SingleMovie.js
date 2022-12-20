@@ -10,6 +10,8 @@ import UsersReview from '../../Components/Reusable/UsersReview';
 const SingleMovie = () => {
     const movie = useLoaderData();
 
+
+
     return (
         <div className='min-h-screen text-white mt-10 mx-60'>
             <div className='flex h-[450px]'>
@@ -20,6 +22,11 @@ const SingleMovie = () => {
             <div className='flex justify-between mt-10 '>
 
                 <div className='w-1/2 text-left'>
+                    {
+                        movie?.genres?.map(genre=>
+                        <p>{genre.name}</p>
+                        )
+                    }
                     <p className=' text-5xl font-bold mb-10'>{movie.title}</p>
                     <p>{movie.overview}</p>
 
