@@ -36,7 +36,7 @@ const Header = () => {
                     </div>
                     <Link to='/'>
                         <div className='logo-container'>
-                            <p className="logo">Film<span className='text-white'>ooR</span></p>
+                            <p className="logo text-black">Film<span className='text-white'>ooR</span></p>
                         </div>
                     </Link>
                 </div>

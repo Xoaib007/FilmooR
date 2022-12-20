@@ -6,7 +6,7 @@ const SingleMovie = () => {
 
     return (
         <div className='min-h-screen text-white'>
-            <p>{movie.title || movie.name}</p>
+            <p>{movie.title}</p>
         </div>
     );
 };

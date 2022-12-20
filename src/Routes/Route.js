@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import HomePage from "../Pages/HomePage/MainBody/HomePage";
 import SingleMovie from "../Pages/SingleMovie/SingleMovie";
+import SingleTVShow from "../Pages/SingleMovie/SingleTVShow";
 
 const router= createBrowserRouter([
 {
@@ -19,7 +20,7 @@ const router= createBrowserRouter([
         },
         {
             path: '/tv/:id',
-            element: <SingleMovie/>,
+            element: <SingleTVShow/>,
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/tv/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         }
     ]
