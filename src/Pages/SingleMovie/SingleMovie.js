@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons'
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import CreditsMovie from './CreditsMovie';
 
 const SingleMovie = () => {
     const movie = useLoaderData();
@@ -25,6 +26,8 @@ const SingleMovie = () => {
                     </div>
                 </div>
             </div>
+            
+            <CreditsMovie id={movie.id}/>
         </div>
     );
 };
