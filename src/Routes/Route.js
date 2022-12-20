@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import HomePage from "../Pages/HomePage/MainBody/HomePage";
 import SingleMovie from "../Pages/SingleMovie/SingleMovie";
-import SingleTVShow from "../Pages/SingleMovie/SingleTVShow";
+import SingleTVShow from "../Pages/SingleTVShow/SingleTVShow";
 
 const router= createBrowserRouter([
 {

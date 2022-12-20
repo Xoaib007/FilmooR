@@ -4,6 +4,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CreditsMovie from './CreditsMovie';
+import SimilarMovies from './SimilarMovies';
 
 const SingleMovie = () => {
     const movie = useLoaderData();
@@ -30,11 +31,20 @@ const SingleMovie = () => {
 
             {/* Casting Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
-                 <p className='text-2xl font-bold'>Starred</p>
-                 <FontAwesomeIcon className='w-6 h-6 mt-1' icon={faAngleRight}/>
+                <p className='text-3xl font-bold'>Starred</p>
+                <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-                <CreditsMovie id={movie.id} />
+            <CreditsMovie id={movie.id} />
+            
+            {/* Similar Section */}
+            <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
+                <p className='text-3xl font-bold'>Similar movies like this</p>
+                <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
+            <SimilarMovies id={movie.id} />
+        </div>
+
+
     );
 };
 

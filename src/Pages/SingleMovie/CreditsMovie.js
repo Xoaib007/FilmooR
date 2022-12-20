@@ -15,7 +15,7 @@ const CreditsMovie = ({ id }) => {
         <div className='flex gap-7 overflow-x-auto pb-10'>
             {
                 slicedCredits?.map(credit =>
-                    <div className=' h-[450px] text-white bg-gray-900 rounded-xl relative'>
+                    <div key={credit.id} className=' h-[450px] text-white bg-gray-900 rounded-xl relative'>
                         <Link>
                             <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${credit.profile_path}`} alt='' />
                             <div className='w-[180px] text-left p-4'>

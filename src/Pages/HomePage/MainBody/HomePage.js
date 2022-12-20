@@ -4,7 +4,7 @@ import MovieList from '../../../Components/Reusable/MovieList';
 
 const HomePage = () => {
     const [selected, setSelected] = useState({
-        first: 'On TV',
+        first: 'In Theatre',
         second: 'On TV',
         third: 'Today',
         forth: 'This Week',
@@ -19,28 +19,9 @@ const HomePage = () => {
         }));
     }
 
-    // const [selectedTrending, setSelectedTrending] = useState({
-    //     first: 'Day',
-    //     second: 'Week',
-    //     third: 'Today'
-    // });
-
-    // const handleToggle2 = (section, selected) => {
-    //     setSelectedTrending(prev => ({
-    //         ...prev,
-    //         [section]: selected
-    //     }));
-    // }
-
-    // const [selectedTopRated, setSelectedTopRated] = useState({
-    //     first: 'TV Show',
-    //     second: 'Movies',
-    //     third: 'Today'
-    // });
-
     return (
         <div className='min-h-screen mx-32'>
-            <Section title='Whats Popular' items={['On TV', 'In Theatre']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first === 'On TV' ? false : true}>
+            <Section title='Whats Popular' items={['In Theatre','On TV']} onToggle={handleToggle.bind(null, 'first')} isToggled={selected.first === 'In Theatre' ? false : true}>
                 <MovieList fetch={selected.first} />
             </Section>
 
