@@ -25,9 +25,9 @@ const SingleMovie = () => {
 
                     <div className='flex'>
                         <button className='h-12 bg-yellow-400 text-black font-bold rounded-l-xl rounded-r-none mt-10 p-4 hover:bg-yellow-300'>
-                            <div className='flex'>
+                            <div className='flex relative bottom-1'>
                                 <FontAwesomeIcon icon={faBookmark} className='w-7 h-7' />
-                                <p className='text-xl'>Add to your watchlist</p>
+                                <p className='text-lg '>Add to your watchlist</p>
                             </div>
 
                         </button>
@@ -36,7 +36,7 @@ const SingleMovie = () => {
                             <label tabIndex={0} className="btn m-1 rounded-r-xl rounded-l-none hover:bg-yellow-300 bg-yellow-400 text-black font-bold mt-10">
                                 <FontAwesomeIcon icon={faAngleDown} />
                             </label>
-                            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <ul tabIndex={0} className="dropdown-content menu p-2 shadow rounded-box w-52">
                                 <li><a>Item 1</a></li>
                                 <li><a>Item 2</a></li>
                             </ul>
