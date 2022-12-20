@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import HomePage from "../Pages/HomePage/MainBody/HomePage";
-import SingleMovie from "../Pages/SingleMovie/SingleMovie";
-import SingleTVShow from "../Pages/SingleTVShow/SingleTVShow";
+import SingleMovie from "../Pages/Single/SingleMovie";
+import SingleTVShow from "../Pages/Single/SingleTVShow";
 
 const router= createBrowserRouter([
 {

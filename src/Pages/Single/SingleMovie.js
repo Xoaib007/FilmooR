@@ -3,8 +3,9 @@ import { faStar } from '@fortawesome/free-regular-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import CreditsMovie from './CreditsMovie';
-import SimilarMovies from './SimilarMovies';
+import Similar from '../../Components/Reusable/Similar';
+import Credits from '../../Components/Reusable/Credits';
+import UsersReview from '../../Components/Reusable/UsersReview';
 
 const SingleMovie = () => {
     const movie = useLoaderData();
@@ -34,14 +35,21 @@ const SingleMovie = () => {
                 <p className='text-3xl font-bold'>Starred</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <CreditsMovie id={movie.id} />
+            <Credits id={movie.id} />
             
             {/* Similar Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
                 <p className='text-3xl font-bold'>Similar movies like this</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <SimilarMovies id={movie.id} />
+            <Similar id={movie.id} />
+            
+            {/* Review Section */}
+            <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
+                <p className='text-3xl font-bold'>User Reviews</p>
+                <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
+            </div>
+            <UsersReview id={movie.id} />
         </div>
 
 

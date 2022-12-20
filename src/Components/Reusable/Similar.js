@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import MovieCard from '../../Components/Reusable/MovieCard';
+import MovieCard from './MovieCard';
 
-const SimilarMovies = ({ id }) => {
+const Similar = ({ id }) => {
 
     const { data: similars = [] } = useQuery({
         queryKey: ['similars'],
@@ -28,4 +28,4 @@ const SimilarMovies = ({ id }) => {
     );
 };
 
-export default SimilarMovies;
+export default Similar;
