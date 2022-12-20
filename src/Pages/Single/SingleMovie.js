@@ -50,6 +50,7 @@ const SingleMovie = () => {
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
             <UsersReview id={movie.id} />
+            <button className='bg-yellow-400 text-black font-bold w-1/2 rounded-lg h-10 mt-10'>Add Review</button>
         </div>
 
 
