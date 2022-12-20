@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CreditsMovie from './CreditsMovie';
@@ -26,9 +27,14 @@ const SingleMovie = () => {
                     </div>
                 </div>
             </div>
-            
-            <CreditsMovie id={movie.id}/>
-        </div>
+
+            {/* Casting Section */}
+            <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
+                 <p className='text-2xl font-bold'>Starred</p>
+                 <FontAwesomeIcon className='w-6 h-6 mt-1' icon={faAngleRight}/>
+            </div>
+                <CreditsMovie id={movie.id} />
+            </div>
     );
 };
 

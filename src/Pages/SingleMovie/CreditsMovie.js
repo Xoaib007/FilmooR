@@ -15,7 +15,7 @@ const CreditsMovie = ({ id }) => {
         <div className='flex gap-7 overflow-x-auto pb-10'>
             {
                 slicedCredits?.map(credit =>
-                    <div className=' h-[400px] text-white bg-gray-900 rounded-xl relative'>
+                    <div className=' h-[450px] text-white bg-gray-900 rounded-xl relative'>
                         <Link>
                             <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${credit.profile_path}`} alt='' />
                             <div className='w-[180px] text-left p-4'>
@@ -27,16 +27,15 @@ const CreditsMovie = ({ id }) => {
                 )
             }
 
-            <div className='absolute right-0 w-12 h-[490px] mr-36'>
+            <div className='absolute right-0 w-12 h-[490px] mr-60'>
                 <div className='h-full w-full bg-gradient-to-r from-black/[0%] to-black/[100%]' />
             </div>
 
-            
-            <div className='h-[400px] w-44 bg-white'>
-                <Link className='w-full text-white bg-gray-900 rounded-xl relative'>
-                    <p>See All</p>
-                </Link>
-            </div>
+            <Link className='h-[450px] w-full text-white bg-gray-900 rounded-xl'>
+                <div className=' px-20 bg-gray-900'>
+                    <p className='w-20 text-2xl mt-44'>See All</p>
+                </div>
+            </Link>
         </div>
     );
 };
