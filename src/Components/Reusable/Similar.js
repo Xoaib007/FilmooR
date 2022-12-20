@@ -21,7 +21,7 @@ const Similar = ({ id }) => {
                 )
             }
             
-            <div className='absolute right-0 w-12 h-[490px] mr-36'>
+            <div className='absolute right-0 w-12 h-[490px] mr-60'>
                 <div className='h-full w-full bg-gradient-to-r from-black/[0%] to-black/[100%]' />
             </div>
         </div>

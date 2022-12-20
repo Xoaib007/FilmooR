@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faBookmark } from '@fortawesome/free-regular-svg-icons'
 import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Similar from '../../Components/Reusable/Similar';
 import Credits from '../../Components/Reusable/Credits';
 import UsersReview from '../../Components/Reusable/UsersReview';
@@ -25,7 +25,9 @@ const SingleMovie = () => {
                     <div className='flex mb-4'>
                         {
                             movie?.genres?.map(genre =>
-                                <p className='border-2 border-yellow-400 rounded-2xl px-2 px-auto mx-2'>{genre.name}</p>
+                                <Link to={`/genre/${genre.id}`}>
+                                    <p className='border-2 border-yellow-400 rounded-2xl px-2 px-auto mx-2'>{genre.name}</p>
+                                </Link>
                             )
                         }
                     </div>
