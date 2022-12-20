@@ -3,10 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 
 const SingleTVShow = () => {
     const show = useLoaderData();
-    
+
     return (
-        <div>
-            
+        <div className='min-h-screen text-white'>
+            <p>{show.name}</p>
         </div>
     );
 };
