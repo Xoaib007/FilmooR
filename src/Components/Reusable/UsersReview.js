@@ -36,7 +36,7 @@ const UsersReview = ({ id }) => {
                     </>
                     :
                     <div className='mt-10 bg-gray-900 p-4'>
-                        <p className='font-bold text-xl'>Looks like no one reviewed this movie/show. <br/>Be the first one to review this movie...</p>
+                        <p className='font-bold text-xl'>Looks like no one reviewed this movie/show. <br />Be the first one to review this movie...</p>
                     </div>
             }
         </div>
