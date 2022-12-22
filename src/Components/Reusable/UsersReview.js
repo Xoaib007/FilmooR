@@ -13,22 +13,31 @@ const UsersReview = ({ id }) => {
     return (
         <div>
             {
-                slicedReviews?.map(review =>
-                    <div key={review.id} className='mt-10 bg-gray-900 p-4'>
-                        <div className='flex'>
-                            <img className='h-10 w-10 rounded-full' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${review.author_details.avatar_path}`} alt=''/>
-                            <p className='text-2xl ml-5'>@{review.author_details.username} <span className='text-sm text-gray-400'>{review.author_details.name}</span></p>
-                        </div>
-                        <div tabIndex={0} className="collapse text-left">
-                            <div className="collapse-title text-xl font-medium">
-                                {review.content.slice(0, 100)}...
-                            </div>
-                            <div className="collapse-content text-gray-400">
-                                <p>{review.content}</p>
-                            </div>
-                        </div>
+                slicedReviews?.length > 0 ?
+                    <>
+                        {
+                            slicedReviews?.map(review =>
+                                <div key={review.id} className='mt-10 bg-gray-900 p-4'>
+                                    <div className='flex'>
+                                        <img className='h-10 w-10 rounded-full' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${review.author_details.avatar_path}`} alt='' />
+                                        <p className='text-2xl ml-5'>@{review.author_details.username} <span className='text-sm text-gray-400'>{review.author_details.name}</span></p>
+                                    </div>
+                                    <div tabIndex={0} className="collapse text-left">
+                                        <div className="collapse-title text-xl font-medium">
+                                            {review.content.slice(0, 100)}...
+                                        </div>
+                                        <div className="collapse-content text-gray-400">
+                                            <p>{review.content}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </>
+                    :
+                    <div className='mt-10 bg-gray-900 p-4'>
+                        <p className='font-bold text-xl'>Looks like no one reviewed this movie/show. <br/>Be the first one to review this movie...</p>
                     </div>
-                )
             }
         </div>
     );
