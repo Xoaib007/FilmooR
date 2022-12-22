@@ -20,7 +20,7 @@ const SingleMovie = () => {
             </div>
 
             <div className='flex justify-between mt-10 '>
-{/* 
+
                 <div className='w-1/2 text-left'>
                     <div className='flex mb-4'>
                         {
@@ -30,7 +30,7 @@ const SingleMovie = () => {
                                 </Link>
                             )
                         }
-                    </div> */}
+                    </div>
 
                     <p className=' text-5xl font-bold mb-10'>{movie.title}</p>
                     <p>{movie.overview}</p>
