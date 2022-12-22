@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faUser } from '@fortawesome/free-solid-svg-icons'
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -19,7 +19,15 @@ const Credits = ({ id }) => {
                 slicedCredits?.map(credit =>
                     <div key={credit.id} className=' h-[450px] text-white bg-gray-900 rounded-xl relative'>
                         <Link>
-                            <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${credit.profile_path}`} alt='' />
+                            {
+                                credit.profile_path ?
+                                    <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${credit.profile_path}`} alt='' />
+                                    :
+                                    <div className='w-[180px] h-[270px]'>
+                                        <FontAwesomeIcon className='w-[140px] h-[230px] mx-auto mt-5 rounded-t-xl text-gray-400' icon={faUser} />
+                                    </div>
+
+                            }
                             <div className='w-[180px] text-left p-4'>
                                 <p className=' text-left text-lg font-bold rounded-t-xl h-16'>{credit.name}</p>
                                 <p>{credit.character}</p>
@@ -36,7 +44,7 @@ const Credits = ({ id }) => {
             <Link className='h-[450px] w-full text-white bg-gray-900 rounded-xl'>
                 <Link to={`/allcredits/${id}`} className=' px-20 bg-gray-900 flex'>
                     <p className='w-20 text-2xl mt-44'>See All</p>
-                    <FontAwesomeIcon className='w-7 h-7 mt-44' icon={faAngleRight}/>
+                    <FontAwesomeIcon className='w-7 h-7 mt-44' icon={faAngleRight} />
                 </Link>
             </Link>
         </div>
