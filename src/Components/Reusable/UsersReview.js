@@ -19,7 +19,13 @@ const UsersReview = ({ id }) => {
                             slicedReviews?.map(review =>
                                 <div key={review.id} className='mt-10 bg-gray-900 p-4'>
                                     <div className='flex'>
-                                        <img className='h-10 w-10 rounded-full' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${review.author_details.avatar_path}`} alt='' />
+                                        {
+                                            review.author_details.avatar_path.includes('/https') ?
+                                                <img className='h-10 w-10 rounded-full' src={review.author_details.avatar_path.slice(1,)} alt='' />
+                                            :
+                                                <img className='h-10 w-10 rounded-full' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${review.author_details.avatar_path}`} alt='' />
+                                        }
+                                        
                                         <p className='text-2xl ml-5'>@{review.author_details.username} <span className='text-sm text-gray-400'>{review.author_details.name}</span></p>
                                     </div>
                                     <div tabIndex={0} className="collapse text-left">
