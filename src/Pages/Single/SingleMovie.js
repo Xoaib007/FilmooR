@@ -6,6 +6,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Similar from '../../Components/Reusable/Similar';
 import Credits from '../../Components/Reusable/Credits';
 import UsersReview from '../../Components/Reusable/UsersReview';
+import ImageCarousel from '../../Components/Reusable/ImageCarousel';
 
 const SingleMovie = () => {
     const movie = useLoaderData();
@@ -16,7 +17,7 @@ const SingleMovie = () => {
         <div className='min-h-screen text-white mt-10 mx-60'>
             <div className='flex h-[450px]'>
                 <img className='w-[300px]' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`} alt='' />
-                <div className='bg-gray-900 rounded-lg w-full border-2 ml-5'>p</div>
+                <ImageCarousel type={'movie'} id={movie.id}/>
             </div>
 
             <div className='flex justify-between mt-10 '>
@@ -49,8 +50,8 @@ const SingleMovie = () => {
                                 <FontAwesomeIcon icon={faAngleDown} />
                             </label>
                             <ul tabIndex={0} className="dropdown-content menu p-2 shadow rounded-box w-52">
-                                <li><a>Item 1</a></li>
-                                <li><a>Item 2</a></li>
+                                <li><Link>Item 1</Link></li>
+                                <li><Link>Item 2</Link></li>
                             </ul>
                         </div>
                     </div>
