@@ -87,7 +87,7 @@ const SingleMovie = () => {
             </div>
             <UsersReview id={movie.id} />
             <button className='bg-yellow-400 text-black font-bold w-1/2 rounded-lg h-10 mt-10'>Add Review</button>
-        </div >
+        </div>
 
 
     );

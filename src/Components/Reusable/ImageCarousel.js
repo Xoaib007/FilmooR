@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import ImageSlider, { Slide } from 'react-auto-image-slider';
 
 const ImageCarousel = ({ type, id }) => {
     console.log(type);
