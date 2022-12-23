@@ -41,11 +41,11 @@ const Credits = ({ id }) => {
                 <div className='h-full w-full bg-gradient-to-r from-black/[0%] to-black/[100%]' />
             </div>
 
-            <Link className='h-[450px] w-full text-white bg-gray-900 rounded-xl'>
-                <Link to={`/allcredits/${id}`} className=' px-20 bg-gray-900 flex'>
+            <Link to={`/allcredits/${id}`} className='h-[450px] w-full text-white bg-gray-900 rounded-xl'>
+                <div  className=' px-20 bg-gray-900 flex'>
                     <p className='w-20 text-2xl mt-44'>See All</p>
                     <FontAwesomeIcon className='w-7 h-7 mt-44' icon={faAngleRight} />
-                </Link>
+                </div>
             </Link>
         </div>
     );
