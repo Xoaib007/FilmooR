@@ -4,6 +4,7 @@ import { faSearch} from '@fortawesome/free-solid-svg-icons'
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
+    console.log(searchInput);
 
     const handleSearchButton = () =>{
 
