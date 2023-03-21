@@ -16,11 +16,11 @@ const ImageCarousel = ({ type, id }) => {
         <div className='bg-gray-900 rounded-lg w-full border-2 ml-5 flex'>
             {
                 images?.backdrops?.length > 10 ?
-                    <div className="carousel">
+                    <div className="carousel rounded-lg">
                         {
                             images?.backdrops?.slice(0, 9).map((image, i) =>
                                 <div id={`${i}`} className="carousel-item relative">
-                                    <img src={`https://www.themoviedb.org/t/p/original//${image.file_path}`} className="w-full" alt='' />
+                                    <img src={`https://www.themoviedb.org/t/p/original//${image.file_path}`} className="rounded-lg" alt='' />
                                 </div>
                             )
                         }
@@ -33,11 +33,11 @@ const ImageCarousel = ({ type, id }) => {
                         </Link>
                     </div>
                     :
-                    <div className="carousel">
+                    <div className="carousel rounded-lg">
                         {
                             images?.backdrops?.map((image, i) =>
                                 <div id={`${i}`} className="carousel-item relative">
-                                    <img src={`https://www.themoviedb.org/t/p/original//${image.file_path}`} className="w-full" alt='' />
+                                    <img src={`https://www.themoviedb.org/t/p/original//${image.file_path}`} alt='' />
                                 </div>
                             )
                         }
