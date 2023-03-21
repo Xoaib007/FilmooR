@@ -8,7 +8,7 @@ const MovieCard = ({ poster_path, title,vote_average,name, vote_count, id }) => 
 
     return (
         <div className=' h-[490px] text-white bg-gray-900 rounded-xl relative'>
-            <Link to={title?`/movie/${id}`:`/tv/${id}`}>
+            <Link  to={title?`/movie/${id}`:`/tv/${id}`}>
                 <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${poster_path}`} alt='' />
                 <div className='w-[180px] text-left p-4'>
                     <p className=' text-left text-lg font-bold rounded-t-xl h-16'>{title?.length > 27?title.slice(0,28)+'...':title || name}</p>
