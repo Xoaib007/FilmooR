@@ -40,20 +40,29 @@ const EpisodeGuide = () => {
                     )
                 }
                 {/* <EpisodeStack show={showDetails.id} seasonNumber={season}/> */}
-                {
-                    episodes?.episodes?.map(episode =>
-                        <div key={episode.id} className=''>
-                            <div className='flex mb-5 mx-40'>
-                                <img className='w-32 rounded-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt=''/>
-                                <div className='text-left ml-5 p-5'>
-                                    <p className='text-gray-300'>Episode: {episode.episode_number}</p>
-                                    <p className='text-2xl font-bold'>{episode.name}</p>
-                                    <p>{episode.overview}</p>
+
+                <div className='mt-20'>
+
+                <div className='text-center mb-10'>
+                    <p className='text-gray-500'>Season: {episodes.season_number}</p>
+                    <p className='text-3xl font-bold'>{episodes.name}</p>
+                </div>
+
+                    {
+                        episodes?.episodes?.map(episode =>
+                            <div key={episode.id} className=''>
+                                <div className='flex mb-5 mx-40'>
+                                    <img className='w-32 rounded-l-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
+                                    <div className='text-left p-5 border-y-2 border-r-2 border-gray-400 rounded-r-lg'>
+                                        <p className='text-gray-300'>Episode: {episode.episode_number}</p>
+                                        <p className='text-2xl font-bold'>{episode.name}</p>
+                                        <p>{episode.overview}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )
-                }
+                        )
+                    }
+                </div>
             </div>
         </div>
     );
