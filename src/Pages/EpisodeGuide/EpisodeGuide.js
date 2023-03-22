@@ -54,7 +54,7 @@ const EpisodeGuide = () => {
                     {
                         episodes?.episodes?.map(episode =>
                             <div key={episode.id} className=''>
-                                <div className='flex mb-5 mx-32'>
+                                <div className='flex mb-5 mx-32 h-48'>
 
                                     {
                                         episode.still_path == null?
@@ -67,7 +67,12 @@ const EpisodeGuide = () => {
                                         <div>
                                         <p className='text-gray-300'>Episode: {episode.episode_number}</p>
                                         <p className='text-2xl font-bold'>{episode.name}</p>
-                                        <p className='text-justify text-gray-400'>{episode.overview}</p>
+                                         {
+                                            episode.overview.length < 220 ?
+                                            <p className='text-justify text-gray-400'>{episode.overview}</p>
+                                            :
+                                            <p className='text-justify text-gray-400'>{episode.overview.slice(0,220)}...</p>
+                                         }
                                         </div>
 
                                         <div className='flex ml-10'>
