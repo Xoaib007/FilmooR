@@ -7,7 +7,7 @@ const EpisodeGuide = () => {
 
     const [season, setSeason] = useState(1);
 
-    const { data: episodes = [], isFetching, refetch} = useQuery({
+    const { data: episodes = [], isFetching, refetch } = useQuery({
         queryKey: ['images'],
         queryFn: () => fetch(`https://api.themoviedb.org/3/tv/${showDetails.id}/season/${season}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
@@ -16,7 +16,7 @@ const EpisodeGuide = () => {
         return <p className='text-white'>Loading</p>
     }
 
-    const changeSeason = (season) =>{
+    const changeSeason = (season) => {
         setSeason(season);
         refetch();
     }
@@ -31,16 +31,29 @@ const EpisodeGuide = () => {
                     <p className=' text-2xl font-bold mt-10'>({showDetails.first_air_date.slice(0, 4)}-{showDetails.last_air_date.slice(0, 4)})</p>
                 </div>
             </div>
-            
+
             <div className='mt-20'>
                 <p className='text-xl font-bold border-b-4 border-yellow-300 w-fit p-2 mb-8 mx-auto'>Season</p>
                 {
-                    showDetails?.seasons?.map( season =>
-                        <label key={season.id}><button onClick={()=>changeSeason(season.season_number)} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button></label>
+                    showDetails?.seasons?.map(season =>
+                        <label key={season.id}><button onClick={() => changeSeason(season.season_number)} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button></label>
                     )
                 }
                 {/* <EpisodeStack show={showDetails.id} seasonNumber={season}/> */}
-                <p>{episodes.name}</p>
+                {
+                    episodes?.episodes?.map(episode =>
+                        <div key={episode.id} className=''>
+                            <div className='flex mb-5 mx-40'>
+                                <img className='w-32 rounded-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt=''/>
+                                <div className='text-left ml-5 p-5'>
+                                    <p className='text-gray-300'>Episode: {episode.episode_number}</p>
+                                    <p className='text-2xl font-bold'>{episode.name}</p>
+                                    <p>{episode.overview}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
