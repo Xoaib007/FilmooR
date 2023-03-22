@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import EpisodeStack from './EpisodeStack';
 
 const EpisodeGuide = () => {
     const showDetails = useLoaderData();
+
+    const [season, setSeason] = useState(0);
 
     return (
         <div className='min-h-screen text-white mt-10 mx-60'>
@@ -20,10 +22,10 @@ const EpisodeGuide = () => {
                 <p className='text-xl font-bold border-b-4 border-yellow-300 w-fit p-2 mb-8 mx-auto'>Season</p>
                 {
                     showDetails?.seasons?.map( season =>
-                        <button key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button>
+                        <button onClick={setSeason(season.season_number)} key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button>
                     )
                 }
-                <EpisodeStack/>
+                <EpisodeStack id={season}/>
             </div>
         </div>
     );
