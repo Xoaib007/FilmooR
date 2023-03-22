@@ -14,15 +14,12 @@ const EpisodeGuide = () => {
                     <p className=' text-2xl font-bold mt-10'>({showDetails.first_air_date.slice(0, 4)}-{showDetails.last_air_date.slice(0, 4)})</p>
                 </div>
             </div>
-
-            <p className='text-white'>{showDetails.number_of_seasons}</p>
-            <p className='text-white'>{showDetails.number_of_episodes}</p>
             
-            <div className='flex'>
-                <p className='text-xl font-bold mt-1'>Season: </p>
+            <div className='mt-20'>
+                <p className='text-xl font-bold border-b-4 border-yellow-300 w-fit p-2 mb-8 mx-auto'>Season</p>
                 {
                     showDetails?.seasons?.map( season =>
-                        <button key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5">{season.season_number + 1}</button>
+                        <button key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button>
                     )
                 }
             </div>
