@@ -15,7 +15,7 @@ const SingleMovie = () => {
         <div className='min-h-screen text-white mt-10 mx-60'>
             <div className='flex h-[450px]'>
                 <img className='w-[300px]' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`} alt='' />
-                <ImageCarousel type={'movie'} id={movie.id}/>
+                <ImageCarousel type='movie' id={movie.id}/>
             </div>
 
             <div className='flex justify-between mt-10 '>
