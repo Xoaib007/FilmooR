@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import empty from './../../empty.jpg';
 
 const EpisodeGuide = () => {
     const showDetails = useLoaderData();
@@ -55,18 +56,23 @@ const EpisodeGuide = () => {
                             <div key={episode.id} className=''>
                                 <div className='flex mb-5 mx-32'>
 
-                                    <img className='w-32 rounded-l-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
+                                    {
+                                        episode.still_path == null?
+                                        <img className='w-32 rounded-l-lg' src={empty} alt='' />
+                                        :
+                                        <img className='w-32 rounded-l-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
+                                    }
 
                                     <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-400 rounded-r-lg'>
                                         <div>
                                         <p className='text-gray-300'>Episode: {episode.episode_number}</p>
                                         <p className='text-2xl font-bold'>{episode.name}</p>
-                                        <p className='text-justify'>{episode.overview}</p>
+                                        <p className='text-justify text-gray-400'>{episode.overview}</p>
                                         </div>
 
                                         <div className='flex ml-10'>
-                                            <FontAwesomeIcon className='w-10 h-10' icon={faStar} />
-                                            <p className='text-4xl font-semibold'>{episode.vote_average}<span className='text-2xl font-normal text-gray-400 '>/10 ({episode.vote_count})</span></p>
+                                            <FontAwesomeIcon className='w-5 h-5' icon={faStar} />
+                                            <p className='text-2xl font-semibold'>{episode.vote_average}<span className='text-xl font-normal text-gray-400 '>/10 ({episode.vote_count})</span></p>
                                         </div>
                                     </div>
 
