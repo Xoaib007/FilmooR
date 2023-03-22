@@ -18,8 +18,8 @@ const CastPage = () => {
                     <p className='text-xl font-bold my-5 text-gray-400'>{person.known_for_department}</p>
                     <p className='text-justify text-gray-400'>{person.biography}</p>
                 </div>
-                <div>
-                    <p className='text-grayu-400'>Born: <span className='text-white'>{person.birthday}</span></p>
+                <div className='mt-10'>
+                    <p className='text-gray-400 text-xl'>Born: <span className='text-white'>{person.birthday}</span></p>
                 </div>
             </div>
         </div>
