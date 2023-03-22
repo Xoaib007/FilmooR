@@ -58,22 +58,22 @@ const EpisodeGuide = () => {
                                 <div className='flex mb-5 mx-32 h-48'>
 
                                     {
-                                        episode.still_path == null?
-                                        <img className='w-32 rounded-l-xl' src={empty} alt='' />
-                                        :
-                                        <img className='w-32 rounded-l-xl' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
+                                        episode.still_path == null ?
+                                            <img className='w-32 rounded-l-xl' src={empty} alt='' />
+                                            :
+                                            <img className='w-32 rounded-l-xl' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
                                     }
 
-                                    <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-500 rounded-r-xl'>
-                                        <div>
-                                        <p className='text-gray-300'>Episode: {episode.episode_number}</p>
-                                        <p className='text-2xl font-bold'>{episode.name}</p>
-                                         {
-                                            episode.overview.length < 220 ?
-                                            <p className='text-justify text-gray-400'>{episode.overview}</p>
-                                            :
-                                            <p className='text-justify text-gray-400'>{episode.overview.slice(0,220)}...</p>
-                                         }
+                                    <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-500 rounded-r-xl w-[800px]'>
+                                        <div className='w-[500px]'>
+                                            <p className='text-gray-300'>Episode: {episode.episode_number}</p>
+                                            <p className='text-2xl font-bold'>{episode.name}</p>
+                                            {
+                                                episode.overview.length < 220 ?
+                                                    <p className='text-justify text-gray-400'>{episode.overview}</p>
+                                                    :
+                                                    <p className='text-justify text-gray-400'>{episode.overview.slice(0, 220)}...</p>
+                                            }
                                         </div>
 
                                         <div className='flex ml-10'>
