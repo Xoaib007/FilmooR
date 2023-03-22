@@ -18,7 +18,7 @@ const Credits = ({ id, type }) => {
             {
                 slicedCredits?.map(credit =>
                     <div key={credit.id} className=' h-[450px] text-white bg-gray-900 rounded-xl relative'>
-                        <Link>
+                        <Link to={`/cast/${credit.id}`}>
                             {
                                 credit.profile_path ?
                                     <img className='w-[180px] h-[270px] rounded-t-xl' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${credit.profile_path}`} alt='' />
