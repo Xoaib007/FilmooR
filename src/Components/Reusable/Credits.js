@@ -41,12 +41,17 @@ const Credits = ({ id, type }) => {
                 <div className='h-full w-full bg-gradient-to-r from-black/[0%] to-black/[100%]' />
             </div>
 
-            <Link to={`/allcredits/${type}/${id}`} className='h-[450px] w-[180px] text-white bg-gray-900 rounded-xl flex'>
-                <div  className=' pl-10 bg-gray-900 mt-[200px] flex'>
-                    <p className='w-20 text-2xl'>See All</p>
-                    <FontAwesomeIcon className='w-7 h-7' icon={faAngleRight} />
-                </div>
-            </Link>
+            {
+                credits?.cast?.length > 9 ?
+                    <Link to={`/allcredits/${type}/${id}`} className='h-[450px] w-[180px] text-white bg-gray-900 rounded-xl flex mr-10'>
+                        <div className=' pl-5 bg-gray-900 mt-[200px] flex'>
+                            <p className='w-20 text-2xl'>See All</p>
+                            <FontAwesomeIcon className='w-7 h-7' icon={faAngleRight} />
+                        </div>
+                    </Link>
+                    :
+                    <></>
+            }
         </div>
     );
 };
