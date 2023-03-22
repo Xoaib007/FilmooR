@@ -25,7 +25,7 @@ const EpisodeGuide = () => {
                         <button onClick={()=>setSeason(season.season_number)} key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button>
                     )
                 }
-                <EpisodeStack show={showDetails.id} season={season}/>
+                <EpisodeStack show={showDetails.id} seasonNumber={season}/>
             </div>
         </div>
     );
