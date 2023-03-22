@@ -29,8 +29,8 @@ const Credits = ({ id, type }) => {
 
                             }
                             <div className='w-[180px] text-left p-4'>
-                                <p className=' text-left text-lg font-bold rounded-t-xl h-16'>{credit.name}</p>
-                                <p>{credit.character}</p>
+                                <p className=' text-left text-xl font-bold rounded-t-xl h-16'>{credit.name}</p>
+                                <p className='text-gray-400'>{credit.character}</p>
                             </div>
                         </Link>
                     </div>
@@ -41,10 +41,10 @@ const Credits = ({ id, type }) => {
                 <div className='h-full w-full bg-gradient-to-r from-black/[0%] to-black/[100%]' />
             </div>
 
-            <Link to={`/allcredits/${type}/${id}`} className='h-[450px] w-full text-white bg-gray-900 rounded-xl'>
-                <div  className=' px-20 bg-gray-900 flex'>
-                    <p className='w-20 text-2xl mt-44'>See All</p>
-                    <FontAwesomeIcon className='w-7 h-7 mt-44' icon={faAngleRight} />
+            <Link to={`/allcredits/${type}/${id}`} className='h-[450px] w-[180px] text-white bg-gray-900 rounded-xl flex'>
+                <div  className=' pl-10 bg-gray-900 mt-[200px] flex'>
+                    <p className='w-20 text-2xl'>See All</p>
+                    <FontAwesomeIcon className='w-7 h-7' icon={faAngleRight} />
                 </div>
             </Link>
         </div>
