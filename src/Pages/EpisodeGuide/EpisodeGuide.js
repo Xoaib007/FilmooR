@@ -57,11 +57,11 @@ const EpisodeGuide = () => {
 
                                     <img className='w-32 rounded-l-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
 
-                                    <div className='flex text-left p-5 border-y-2 border-r-2 border-gray-400 rounded-r-lg'>
+                                    <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-400 rounded-r-lg'>
                                         <div>
                                         <p className='text-gray-300'>Episode: {episode.episode_number}</p>
                                         <p className='text-2xl font-bold'>{episode.name}</p>
-                                        <p>{episode.overview}</p>
+                                        <p className='text-justify'>{episode.overview}</p>
                                         </div>
 
                                         <div className='flex ml-10'>
