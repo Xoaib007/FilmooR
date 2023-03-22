@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import EpisodeStack from './EpisodeStack';
 
 const EpisodeGuide = () => {
     const showDetails = useLoaderData();
@@ -22,6 +23,7 @@ const EpisodeGuide = () => {
                         <button key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button>
                     )
                 }
+                <EpisodeStack/>
             </div>
         </div>
     );
