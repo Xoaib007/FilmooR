@@ -18,7 +18,7 @@ const SingleTVShow = () => {
                 <ImageCarousel type={'movie'} id={show.id}/>
             </div>
 
-            <Link to='/episodeguide/' className='flex my-10'>
+            <Link to={`/episodeguide/${show.id}`} className='flex my-10'>
                 <p className='text-xl font-bold'>Episode Guide</p>
                 <FontAwesomeIcon className='w-5 h-5 mt-1' icon={faAngleRight} />
             </Link>
