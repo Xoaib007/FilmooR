@@ -18,11 +18,11 @@ const EpisodeGuide = () => {
             <p className='text-white'>{showDetails.number_of_seasons}</p>
             <p className='text-white'>{showDetails.number_of_episodes}</p>
             
-            <div>
-                <p>Season: </p>
+            <div className='flex'>
+                <p className='text-xl font-bold mt-1'>Season: </p>
                 {
                     showDetails?.seasons?.map( season =>
-                        <button key={season.id}>{season.season_number}</button>
+                        <button key={season.id} className="bg-yellow-300 rounded-full w-10 h-10 mx-5">{season.season_number + 1}</button>
                     )
                 }
             </div>
