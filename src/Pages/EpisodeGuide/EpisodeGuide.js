@@ -44,6 +44,7 @@ const EpisodeGuide = () => {
                 }
                 {/* <EpisodeStack show={showDetails.id} seasonNumber={season}/> */}
 
+                {/* Episode stack */}
                 <div className='mt-20'>
 
                     <div className='text-center mb-10'>
@@ -58,12 +59,12 @@ const EpisodeGuide = () => {
 
                                     {
                                         episode.still_path == null?
-                                        <img className='w-32 rounded-l-lg' src={empty} alt='' />
+                                        <img className='w-32 rounded-l-xl' src={empty} alt='' />
                                         :
-                                        <img className='w-32 rounded-l-lg' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
+                                        <img className='w-32 rounded-l-xl' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${episode.still_path}`} alt='' />
                                     }
 
-                                    <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-400 rounded-r-lg'>
+                                    <div className='flex items-center text-left p-5 border-y-2 border-r-2 border-gray-500 rounded-r-xl'>
                                         <div>
                                         <p className='text-gray-300'>Episode: {episode.episode_number}</p>
                                         <p className='text-2xl font-bold'>{episode.name}</p>
