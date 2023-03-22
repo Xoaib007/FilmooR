@@ -31,9 +31,14 @@ const router= createBrowserRouter([
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/tv/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         },
         {
-            path: '/allcredits/:id',
+            path: '/allcredits/movie/:id',
             element: <AllCredits/>,
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/movie/${params.id}/credits?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
+        },
+        {
+            path: '/allcredits/tv/:id',
+            element: <AllCredits/>,
+            loader: ({params}) => fetch(`https://api.themoviedb.org/3/tv/${params.id}/credits?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         }
     ]
 }

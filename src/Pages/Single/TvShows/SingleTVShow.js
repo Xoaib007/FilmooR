@@ -15,7 +15,7 @@ const SingleTVShow = () => {
         <div className='min-h-screen text-white mt-10 mx-60'>
             <div className='flex h-[450px]'>
                 <img className='w-[300px]' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`} alt=''/>
-                <ImageCarousel type={'movie'} id={show.id}/>
+                <ImageCarousel type='tv' id={show.id}/>
             </div>
 
             <Link to={`/episodeguide/${show.id}`} className='flex my-10'>
