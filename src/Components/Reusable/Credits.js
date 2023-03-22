@@ -4,10 +4,10 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Credits = ({ id }) => {
+const Credits = ({ id, type }) => {
     const { data: credits = [] } = useQuery({
         queryKey: ['credits'],
-        queryFn: () => fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
+        queryFn: () => fetch(`https://api.themoviedb.org/3/${type}/${id}/credits?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
 
 

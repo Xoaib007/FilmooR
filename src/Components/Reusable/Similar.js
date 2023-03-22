@@ -2,11 +2,11 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import MovieCard from './MovieCard';
 
-const Similar = ({ id }) => {
+const Similar = ({ id, type }) => {
 
     const { data: similars = [] } = useQuery({
         queryKey: ['similars'],
-        queryFn: () => fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
+        queryFn: () => fetch(`https://api.themoviedb.org/3/${type}/${id}/similar?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
 
     const slicedSimilars = similars?.results?.slice(0, 14);

@@ -3,10 +3,10 @@ import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import Credits from '../../Components/Reusable/Credits';
-import ImageCarousel from '../../Components/Reusable/ImageCarousel';
-import Similar from '../../Components/Reusable/Similar';
-import UsersReview from '../../Components/Reusable/UsersReview';
+import Credits from '../../../Components/Reusable/Credits';
+import ImageCarousel from '../../../Components/Reusable/ImageCarousel';
+import Similar from '../../../Components/Reusable/Similar';
+import UsersReview from '../../../Components/Reusable/UsersReview';
 
 const SingleTVShow = () => {
     const show = useLoaderData();
@@ -18,7 +18,12 @@ const SingleTVShow = () => {
                 <ImageCarousel type={'movie'} id={show.id}/>
             </div>
 
-            <div className='flex justify-between mt-10 '>
+            <Link to='/episodeguide/' className='flex my-10'>
+                <p className='text-xl font-bold'>Episode Guide</p>
+                <FontAwesomeIcon className='w-5 h-5 mt-1' icon={faAngleRight} />
+            </Link>
+
+            <div className='flex justify-between mt-5 '>
 
                 <div className='w-1/2 text-left'>
                     <div className='flex mb-4'>
@@ -31,7 +36,7 @@ const SingleTVShow = () => {
                         }
                     </div>
 
-                    <p className=' text-5xl font-bold mb-10'>{show.title}</p>
+                    <p className=' text-5xl font-bold mb-10'>{show.name}</p>
                     <p>{show.overview}</p>
 
                     <div className='flex'>
@@ -69,14 +74,14 @@ const SingleTVShow = () => {
                 <p className='text-3xl font-bold'>Starred</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <Credits id={show.id} />
+            <Credits id={show.id} type="tv"/>
 
             {/* Similar Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
                 <p className='text-3xl font-bold'>Similar shows like this</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <Similar id={show.id} />
+            <Similar id={show.id} type="tv" />
 
             {/* Review Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>

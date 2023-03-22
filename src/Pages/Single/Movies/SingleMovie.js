@@ -3,15 +3,13 @@ import { faStar, faBookmark } from '@fortawesome/free-regular-svg-icons'
 import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import Similar from '../../Components/Reusable/Similar';
-import Credits from '../../Components/Reusable/Credits';
-import UsersReview from '../../Components/Reusable/UsersReview';
-import ImageCarousel from '../../Components/Reusable/ImageCarousel';
+import Similar from '../../../Components/Reusable/Similar';
+import Credits from '../../../Components/Reusable/Credits';
+import UsersReview from '../../../Components/Reusable/UsersReview';
+import ImageCarousel from '../../../Components/Reusable/ImageCarousel';
 
 const SingleMovie = () => {
     const movie = useLoaderData();
-
-
 
     return (
         <div className='min-h-screen text-white mt-10 mx-60'>
@@ -71,21 +69,21 @@ const SingleMovie = () => {
                 <p className='text-3xl font-bold'>Starred</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <Credits id={movie.id} />
+            <Credits id={movie.id}  type="movie"/>
 
             {/* Similar Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
                 <p className='text-3xl font-bold'>Similar movies like this</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <Similar id={movie.id} />
+            <Similar id={movie.id} type='movie'/>
 
             {/* Review Section */}
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
                 <p className='text-3xl font-bold'>User Reviews</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
             </div>
-            <UsersReview id={movie.id} />
+            <UsersReview id={movie.id} type='movie' />
             <button className='bg-yellow-400 text-black font-bold w-1/2 rounded-lg h-10 mt-10'>Add Review</button>
         </div>
 
