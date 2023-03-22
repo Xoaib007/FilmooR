@@ -7,13 +7,18 @@ const EpisodeGuide = () => {
 
     const [season, setSeason] = useState(1);
 
-    const { data: episodes = [], isFetching} = useQuery({
+    const { data: episodes = [], isFetching, refetch} = useQuery({
         queryKey: ['images'],
         queryFn: () => fetch(`https://api.themoviedb.org/3/tv/${showDetails.id}/season/${season}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
 
     if (isFetching) {
-        return <p>Loading</p>
+        return <p className='text-white'>Loading</p>
+    }
+
+    const changeSeason = (season) =>{
+        setSeason(season);
+        refetch();
     }
 
     return (
@@ -31,7 +36,7 @@ const EpisodeGuide = () => {
                 <p className='text-xl font-bold border-b-4 border-yellow-300 w-fit p-2 mb-8 mx-auto'>Season</p>
                 {
                     showDetails?.seasons?.map( season =>
-                        <label key={season.id}><button onClick={()=>setSeason(season.season_number)} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button></label>
+                        <label key={season.id}><button onClick={()=>changeSeason(season.season_number)} className="bg-yellow-300 rounded-full w-10 h-10 mx-5 text-black border-2 border-white">{season.season_number}</button></label>
                     )
                 }
                 {/* <EpisodeStack show={showDetails.id} seasonNumber={season}/> */}
