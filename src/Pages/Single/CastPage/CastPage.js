@@ -27,8 +27,8 @@ const CastPage = () => {
                 <div className='text-left ml-10'>
                     <p className='text-5xl font-bold mt-5'>{person.name}</p>
                     <p className='text-xl font-bold my-5 text-gray-400'>{person.known_for_department}</p>
-                    <p className='text-justify text-gray-400'>{person.biography}</p>
-                    <p className='text-gray-400 text-xl'>Born: <span className='text-white'>{person.birthday}</span></p>
+                    <p className='text-justify text-gray-400'>{person.biography.length > 1020 ? person.biography.slice(0, 1020) : person.biography }</p>
+                    <p className='text-gray-400 text-xl mt-3'>Born: <span className='text-white'>{person.birthday}</span></p>
                 </div>
             </div>
 
