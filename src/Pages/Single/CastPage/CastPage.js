@@ -2,9 +2,9 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { Carousel } from 'react-daisyui';
 import { useLoaderData } from 'react-router-dom';
 import MovieCard from '../../../Components/Reusable/MovieCard';
+import CastCarousel from './CastCarousel';
 
 const CastPage = () => {
     const person = useLoaderData();
@@ -12,11 +12,6 @@ const CastPage = () => {
     const { data: popular = [] } = useQuery({
         queryKey: ['similars'],
         queryFn: () => fetch(`https://api.themoviedb.org/3/person/${person.id}/movie_credits?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
-    })
-
-    const { data: images = [] } = useQuery({
-        queryKey: ['images'],
-        queryFn: () => fetch(`https://api.themoviedb.org/3/person/${person.id}/images?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
 
     const sliced = popular?.cast?.slice(0, 14);
@@ -82,17 +77,7 @@ const CastPage = () => {
                 </button>
             </div> */}
 
-            <Carousel className="rounded-box mt-10 h-96">
-                {
-                    images?.profiles?.map(image =>
-                        <Carousel.Item
-                            key={image.vote_count}
-                            src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image.file_path}`}
-                            alt="Car"
-                        />
-                    )
-                }
-            </Carousel>
+            <CastCarousel id={person.id}/>
 
 
         </div>
