@@ -45,11 +45,11 @@ const Header = () => {
 
                 <div className="navbar-end">
 
-                    <div className='mr-10 h-8 p-2 rounded-sm btn'>
-                        <FontAwesomeIcon icon={faBookmark} />
+                    <Link className='text-white font-bold hover:text-gray-400 hover:border-2 border-gray-400 px-4 py-2 rounded-lg flex'>
+                        <FontAwesomeIcon className='mt-1' icon={faBookmark} />
                         <p className='ml-3 font-bold'>Watchlist</p>
-                    </div>
-                    <Link className="btn">Get started</Link>
+                    </Link>
+                    <Link className="text-white font-bold hover:text-gray-400 hover:border-2 border-gray-400 px-4 py-2 rounded-lg">Sign In</Link>
 
 
                 </div>
