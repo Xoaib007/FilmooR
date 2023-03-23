@@ -32,6 +32,8 @@ const CastPage = () => {
                 </div>
             </div>
 
+            {/* Known for */}
+
             <div className='flex mb-5 mt-20 border-b-4 border-yellow-400 pb-2'>
                 <p className='text-3xl font-bold'>Known For</p>
                 <FontAwesomeIcon className='w-10 h-10' icon={faAngleRight} />
@@ -49,7 +51,11 @@ const CastPage = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-5 gap-4 mt-20'>
+            {/* Gallery */}
+
+            <p className='text-3xl font-bold border-b-8 border-yellow-300 w-fit p-2 mt-20 mx-auto'>Gallery</p>
+
+            <div className='grid grid-cols-5 gap-4 mt-10'>
             {
                 images?.profiles?.map((image, i) =>
                     <img className='w-52 rounded-lg' key={i} src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image.file_path}`} alt="Car" />
