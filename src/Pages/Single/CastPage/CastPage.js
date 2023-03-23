@@ -2,6 +2,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { Carousel } from 'react-daisyui';
 import { useLoaderData } from 'react-router-dom';
 import MovieCard from '../../../Components/Reusable/MovieCard';
 
@@ -14,7 +15,7 @@ const CastPage = () => {
     })
 
     const { data: images = [] } = useQuery({
-        queryKey: ['similars'],
+        queryKey: ['images'],
         queryFn: () => fetch(`https://api.themoviedb.org/3/person/${person.id}/images?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`).then(res => res.json())
     })
 
@@ -50,11 +51,11 @@ const CastPage = () => {
             </div>
 
 
-            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            {/* <div id="default-carousel" class="relative w-full" data-carousel="slide">
                 <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                     {
-                        images?.profiles?.map((image, i) =>
-                            <div key={i} class="hidden duration-700 ease-in-out" data-carousel-item>
+                        images?.profiles?.map(image =>
+                            <div key={image.file_path} class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image.file_path}`} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
                             </div>
                         )
@@ -79,7 +80,19 @@ const CastPage = () => {
                         <span class="sr-only">Next</span>
                     </span>
                 </button>
-            </div>
+            </div> */}
+
+            <Carousel className="rounded-box mt-10 h-96">
+                {
+                    images?.profiles?.map(image =>
+                        <Carousel.Item
+                            key={image.vote_count}
+                            src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${image.file_path}`}
+                            alt="Car"
+                        />
+                    )
+                }
+            </Carousel>
 
 
         </div>
