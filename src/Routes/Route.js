@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import AllCredits from "../Components/Reusable/AllCredits";
 import Main from "../Layout/Main";
+import SignIn from "../Pages/Authentication/SignIn";
+import SignUp from "../Pages/Authentication/SignUp";
 import EpisodeGuide from "../Pages/EpisodeGuide/EpisodeGuide";
 import HomePage from "../Pages/HomePage/MainBody/HomePage";
 import CastPage from "../Pages/Single/CastPage/CastPage";
@@ -48,11 +50,11 @@ const router= createBrowserRouter([
         },
         {
             path: '/signin',
-            element: <CastPage/>
+            element: <SignIn/>
         },
         {
             path: '/signup',
-            element: <CastPage/>
+            element: <SignUp/>
         },
     ]
 }
