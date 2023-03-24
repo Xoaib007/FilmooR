@@ -45,7 +45,15 @@ const router= createBrowserRouter([
             path: '/cast/:id',
             element: <CastPage/>,
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/person/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
-        }
+        },
+        {
+            path: '/signin',
+            element: <CastPage/>
+        },
+        {
+            path: '/signup',
+            element: <CastPage/>
+        },
     ]
 }
 ])
