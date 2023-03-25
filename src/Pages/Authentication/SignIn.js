@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SignIn = () => {
     return (
-        <div className='min-h-screen text-white mx-60 mt-32'>
-            <div class="bg-gray-800">
+        <div className='min-h-screen text-white mx-60 mt-10'>
                 <div class="p-8 lg:w-1/2 mx-auto">
                     <div class="bg-white rounded-t-lg p-8">
                         <p class="text-center text-sm text-gray-400 font-light">Sign up with</p>
@@ -29,7 +28,7 @@ const SignIn = () => {
                         </div>
                     </div>
                     <div class="bg-gray-100 rounded-b-lg py-12 px-4 lg:px-24">
-                        <p class="text-center text-sm text-gray-500 font-light">        Or sign up with credentials      </p>
+                        <p class="text-center text-sm text-gray-500 font-light">Or sign up with credentials</p>
                         <form class="mt-6">
                             <div class="relative">
                                 <input class="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline" id="username" type="text" placeholder="Email" />
@@ -58,13 +57,18 @@ const SignIn = () => {
                             </div>
 
                             <p class="mt-4 italic text-gray-500 font-light text-xs">Password strength: <span class="font-bold text-green-400">strong</span></p>
-                            <div class="mt-4 flex items-center text-gray-500">          <input type="checkbox" id="remember" name="remember" class="mr-2" />          <label class="text-sm" for="remember">I agree with the </label><Link class="text-indigo-400 hover:text-indigo-500">Privacy Policy</Link>        </div>
-                    <div class="flex items-center justify-center mt-8">          <button class="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"          >            Create Account          </button>        </div> 
-                    
-                    </form>
+                            <div class="mt-4 flex items-center text-gray-500">
+                                <input type="checkbox" id="remember" name="remember" class="mr-2" />
+                                <label class="text-sm" for="remember">I agree with the </label>
+                                <Link class="text-indigo-400 hover:text-indigo-500">Privacy Policy</Link>
+                            </div>
+                            <div class="flex items-center justify-center mt-8">
+                                <button class="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Create Account</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };
