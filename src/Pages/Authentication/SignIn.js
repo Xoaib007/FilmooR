@@ -55,14 +55,8 @@ const SignIn = () => {
                                     </svg>
                                 </div>
                             </div>
-
-                            <div class="mt-4 flex items-center text-gray-500">
-                                <input type="checkbox" id="remember" name="remember" class="mr-2" />
-                                <label class="text-sm" for="remember">I agree with the </label>
-                                <Link class="text-indigo-400 hover:text-indigo-500 ml-2">Privacy Policy</Link>
-                            </div>
                             <div class="flex items-center justify-center mt-8">
-                                <button class="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Create Account</button>
+                                <button class="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Sign In</button>
                             </div>
 
                             <p className='text-gray-400 pt-5'>Not yet registered?<Link to='/signup' className='text-yellow-400 underline hover:text-yellow-300'>Sign up here</Link></p>
