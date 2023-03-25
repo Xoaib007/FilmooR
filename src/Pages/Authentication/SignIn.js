@@ -65,7 +65,7 @@ const SignIn = () => {
                                 <button class="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Create Account</button>
                             </div>
 
-                            <p className='text-gray-400 pt-5'>Already registered?<Link to='/signin' className='text-yellow-400 underline hover:text-yellow-300'>Sign In</Link></p>
+                            <p className='text-gray-400 pt-5'>Not yet registered?<Link to='/signup' className='text-yellow-400 underline hover:text-yellow-300'>Sign up here</Link></p>
 
                         </form>
                     </div>
