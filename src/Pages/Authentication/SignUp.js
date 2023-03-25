@@ -63,7 +63,7 @@ const SignUp = () => {
                         <Link class="text-indigo-400 hover:text-indigo-500 ml-2">Privacy Policy</Link>
                     </div>
                     <div class="flex items-center justify-center mt-8">
-                        <button class="text-white py-2 px-4 uppercase rounded bg-yellow-400 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Create Account</button>
+                        <button class="text-white py-2 px-4 uppercase rounded bg-yellow-300 hover:bg-yellow-400 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">Create Account</button>
                     </div>
 
                     <p className='text-gray-400 pt-5'>Already registered?<Link to='/signin' className='text-yellow-400 underline hover:text-yellow-300'>Sign In</Link></p>
