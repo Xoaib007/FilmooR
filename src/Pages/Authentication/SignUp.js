@@ -7,7 +7,7 @@ const SignUp = () => {
     return (
         <div className='min-h-screen text-white mx-60 mt-5'>
         <div class="p-8 lg:w-1/2 mx-auto">
-            <div class="bg-white rounded-t-lg p-8">
+            <div class="bg-white rounded-t-2xl p-8">
                 <p class="text-center text-sm text-gray-400 font-light">Sign up with</p>
                 <div class="flex items-center justify-center space-x-4 mt-3">
                                 <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-gray-900 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"          >
@@ -20,7 +20,7 @@ const SignUp = () => {
                                 </button>
                             </div>
             </div>
-            <div class="bg-gray-100 rounded-b-lg py-12 px-4 lg:px-24">
+            <div class="bg-gray-100 rounded-b-2xl py-12 px-4 lg:px-24">
                 <p class="text-center text-sm text-gray-500 font-light">Or sign up with credentials</p>
                 <form class="mt-6">
                     <div class="relative">
