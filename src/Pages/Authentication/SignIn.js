@@ -9,18 +9,16 @@ const SignIn = () => {
                 <div class="p-8 lg:w-1/2 mx-auto">
                     <div class="bg-white rounded-t-lg p-8">
                         <p class="text-center text-sm text-gray-400 font-light">Sign in with</p>
-                        <div>
-                            <div class="flex items-center justify-center space-x-4 mt-3">
+                        <div class="flex items-center justify-center space-x-4 mt-3">
                                 <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-yellow-300 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"          >
                                     <FontAwesomeIcon className='w-6 h-6 mr-3 text-gray-700' icon={faFacebook} />
                                     Facebook
                                 </button>
-                                <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-indigo-500 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+                                <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-yellow-300 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                                     <FontAwesomeIcon className='w-6 h-6 mr-3 text-gray-700' icon={faGoogle} />
                                     Google
                                 </button>
                             </div>
-                        </div>
                     </div>
                     <div class="bg-gray-100 rounded-b-lg py-12 px-4 lg:px-24">
                         <p class="text-center text-sm text-gray-500 font-light">Or sign in with credentials</p>
