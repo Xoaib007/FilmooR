@@ -14,7 +14,7 @@ const SignUp = () => {
                                     <FontAwesomeIcon className='w-6 h-6 mr-3 text-gray-700' icon={faFacebook} />
                                     Facebook
                                 </button>
-                                <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-yellow-300 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+                                <button class="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-gray-900 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                                     <FontAwesomeIcon className='w-6 h-6 mr-3 text-gray-700' icon={faGoogle} />
                                     Google
                                 </button>
