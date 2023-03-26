@@ -15,6 +15,8 @@ const SearchBar = () => {
         setSearchInput(event.target.value);
     }
 
+    
+
     return (
         <div className=" mx-auto hidden lg:flex">
 
