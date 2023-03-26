@@ -51,7 +51,7 @@ const SignUp = () => {
 
                     <p class="mt-4 italic text-gray-500 font-light text-xs">Password strength: <span class="font-bold text-green-400">strong</span></p>
                     <div class="mt-4 flex items-center text-gray-500">
-                        <input type="checkbox" id="remember" name="remember" class="mr-2" />
+                        <input type="checkbox" id="remember" name="remember" class="mr-2" required/>
                         <label class="text-sm" for="remember">I agree with the </label>
                         <Link class="text-indigo-400 hover:text-indigo-500 ml-2">Privacy Policy</Link>
                     </div>
