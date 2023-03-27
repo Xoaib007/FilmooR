@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
     console.log(searchInput);
+
+    const { data: search = [] } = useQuery({
+        queryKey: ['images'],
+        queryFn: () => fetch(`https://api.themoviedb.org/3/search/movie?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${searchInput}&page=1`).then(res => res.json())
+    })
 
 
     return (
