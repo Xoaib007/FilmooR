@@ -1,11 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Search = () => {
     const search = useLoaderData();
 
     return (
-        <div>
+        <div className='min-h-screen text-white mt-10 mx-60'>
+            {
+                search?.results?.map(result=>
+                    <Link key={result.id} to={`searchresult/${result.id}`}>{result.name}</Link>
+                )
+            }
             
         </div>
     );
