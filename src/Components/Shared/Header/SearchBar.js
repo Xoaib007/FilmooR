@@ -7,25 +7,17 @@ const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
     console.log(searchInput);
 
-    const handleSearchButton = () =>{
-        
-    }
-
-    const handleSearch = (event) =>{
-        event.preventDefault();
-        setSearchInput(event.target.value);
-    }
 
     return (
         <div className=" mx-auto hidden lg:flex">
 
-            <form onSubmit={handleSearchButton} className="form-control flex flex-row">
+            <div className="form-control flex flex-row">
 
-                <input onChange={handleSearch} type="text" placeholder="Search for a movie, tv show or person..." className="w-96 h-8 rounded-l-full input input-bordered" />
+                <input onChange={(e)=> setSearchInput(e.target.value)} type="text" placeholder="Search for a movie, tv show or person..." className="w-96 h-8 rounded-l-full input input-bordered" />
 
                 <Link to={`/search/${searchInput}`} type='submit' className='bg-yellow-400 w-20 rounded-full relative right-10'><FontAwesomeIcon icon={faSearch} /></Link>
 
-            </form>
+            </div>
 
         </div>
     );
