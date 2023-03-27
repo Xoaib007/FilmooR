@@ -8,7 +8,9 @@ const Search = () => {
         <div className='min-h-screen text-white mt-10 mx-60'>
             {
                 search?.results?.map(result=>
-                    <Link key={result.id} to={`searchresult/${result.id}`}>{result.name}</Link>
+                    <div key={result.id}>
+                        <Link to={`searchresult/${result.id}`} className='inline'>{result.name}</Link>
+                    </div>
                 )
             }
             
