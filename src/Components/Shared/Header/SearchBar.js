@@ -18,13 +18,7 @@ const SearchBar = () => {
     return (
         <div className=" mx-auto hidden lg:flex">
 
-            <form onSubmit={handleSearchButton} className="form-control flex flex-row">
-
-                <input onChange={handleSearch} type="text" placeholder="Search for a movie, tv show or person..." className="w-96 h-8 rounded-l-full input input-bordered" />
-
-                <button type='submit' className='bg-yellow-400 w-20 rounded-full relative right-10'><FontAwesomeIcon icon={faSearch} /></button>
-
-            </form>
+            
 
         </div>
     );
