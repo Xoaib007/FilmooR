@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-import React from 'react';
-import SearchBar from './SearchBar';
+import React, { useState } from 'react';
+// import SearchBar from './SearchBar';
 import { Link } from 'react-router-dom';
 import { SearchBar1 } from './components/SearchBar';
+import { SearchResultsList } from './components/SearchResultsList';
 
 const Header = () => {
+
+    const [results, setResults] = useState([]);
 
     return (
         <div>
