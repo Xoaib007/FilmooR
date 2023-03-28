@@ -3,6 +3,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import SearchBar from './SearchBar';
 import { Link } from 'react-router-dom';
+import { SearchBar1 } from './components/SearchBar';
 
 const Header = () => {
 
@@ -41,7 +42,8 @@ const Header = () => {
                     </Link>
                 </div>
 
-                <SearchBar />
+                <SearchBar1 setResults={setResults} />
+                {results && results.length > 0 && <SearchResultsList results={results} />}
 
                 <div className="navbar-end">
 
