@@ -47,7 +47,7 @@ const Header = () => {
 
                 <div className=' flex-col w-full'>
                     <SearchBar1 setResults={setResults} />
-                    {results && results.length > 0 && <SearchResultsList results={results} />}
+                    {results && results.length > 0 && <SearchResultsList results={results} className='absolute'/>}
                 </div>
 
                 <div className="navbar-end">
