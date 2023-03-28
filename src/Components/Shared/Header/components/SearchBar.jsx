@@ -8,8 +8,8 @@ export const SearchBar1 = ({ setResults }) => {
 
   const fetchData = (value) => {
     fetch(`https://api.themoviedb.org/3/search/keyword?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${input}`)
-      .then((response) => response.json())
-      .then((json) => {
+      .then(response => response.json())
+      .then(json => {
         const results = json.filter((user) => {
           return (
             value &&
