@@ -50,11 +50,6 @@ const router= createBrowserRouter([
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/person/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         },
         {
-            path: '/search/:input',
-            element: <Search/>,
-            loader: ({params}) => fetch(`https://api.themoviedb.org/3/search/movie?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${params.input}&page=1`)
-        },
-        {
             path: '/signin',
             element: <SignIn/>
         },
