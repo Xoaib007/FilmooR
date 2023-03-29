@@ -7,22 +7,16 @@ export const SearchBar1 = ({ setResults }) => {
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
-    fetch(`https://api.themoviedb.org/3/search/keyword?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${input}`)
+    fetch(`https://api.themoviedb.org/3/search/keyword?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${value}`)
       .then(response => response.json())
       .then(json => {
-        const results = json.result.filter((user) => {
-          return (
-            value &&
-            user.name
-          );
-        });
-        setResults(results);
+        setResults(json);
       });
   };
 
   const handleChange = (value) => {
     setInput(value);
-    fetchData(value);
+    fetchData(input);
   };
 
   return (
