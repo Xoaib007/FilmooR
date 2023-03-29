@@ -6,3 +6,4 @@ export const SearchResult = ({ result,id }) => {
     <Link to={`/keyword/${id}`} className="search-result">{result}</Link>
   );
 };
+
