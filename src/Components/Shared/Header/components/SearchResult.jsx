@@ -3,6 +3,6 @@ import "./SearchResult.css";
 
 export const SearchResult = ({ result,id }) => {
   return (
-    <Link to={`/${id}`} className="search-result">{result}</Link>
+    <Link to={`/keyword/${id}`} className="search-result">{result}</Link>
   );
 };

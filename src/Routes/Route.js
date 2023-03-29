@@ -5,6 +5,7 @@ import SignIn from "../Pages/Authentication/SignIn";
 import SignUp from "../Pages/Authentication/SignUp";
 import EpisodeGuide from "../Pages/EpisodeGuide/EpisodeGuide";
 import HomePage from "../Pages/HomePage/MainBody/HomePage";
+import { KeywordPage } from "../Pages/Keywords/KeywordsPage";
 import CastPage from "../Pages/Single/CastPage/CastPage";
 import SingleMovie from "../Pages/Single/Movies/SingleMovie";
 import SingleTVShow from "../Pages/Single/TvShows/SingleTVShow";
@@ -46,6 +47,11 @@ const router= createBrowserRouter([
         {
             path: '/cast/:id',
             element: <CastPage/>,
+            loader: ({params}) => fetch(`https://api.themoviedb.org/3/person/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
+        },
+        {
+            path: '/keyword/:id',
+            element: <KeywordPage/>,
             loader: ({params}) => fetch(`https://api.themoviedb.org/3/person/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
         },
         {
