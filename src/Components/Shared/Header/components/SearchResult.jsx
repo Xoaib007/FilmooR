@@ -1,12 +1,10 @@
+import { Link } from "react-router-dom";
 import "./SearchResult.css";
 
-export const SearchResult = ({ result }) => {
+export const SearchResult = ({ result,id }) => {
   return (
-    <div
-      className="search-result"
-      onClick={(e) => alert(`You selected ${result}!`)}
-    >
-      {result}
+    <div className="search-result">
+      <Link to={`/${id}`}>{result}</Link>
     </div>
   );
 };
