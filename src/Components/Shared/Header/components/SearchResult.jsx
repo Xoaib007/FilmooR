@@ -3,8 +3,6 @@ import "./SearchResult.css";
 
 export const SearchResult = ({ result,id }) => {
   return (
-    <div className="search-result">
-      <Link to={`/${id}`}>{result}</Link>
-    </div>
+    <Link to={`/${id}`} className="search-result">{result}</Link>
   );
 };
