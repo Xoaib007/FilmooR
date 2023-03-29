@@ -45,6 +45,8 @@ const Header = () => {
                     </Link>
                 </div>
 
+                {/* Searchbar */}
+
                 <div className=' flex-col w-full relative items-stretch'>
                     <SearchBar1 setResults={setResults} />
                     {results && results.length > 0 && <SearchResultsList results={results}/>}
