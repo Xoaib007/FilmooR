@@ -59,6 +59,7 @@ const Header = () => {
                         <p className='ml-3 font-bold'>Watchlist</p>
                     </Link>
                     <Link to='/signin' className="text-white font-bold hover:text-gray-400 hover:border-2 border-gray-400 px-4 py-2 rounded-xl">Sign In</Link>
+                    
 
                 </div>
             </div>
