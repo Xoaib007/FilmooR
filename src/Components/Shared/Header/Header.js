@@ -9,6 +9,7 @@ import { SearchResultsList } from './components/SearchResultsList';
 const Header = () => {
 
     const [results, setResults] = useState([]);
+    console.log(results)
 
     return (
         <div>
@@ -49,7 +50,7 @@ const Header = () => {
 
                 <div className=' flex-col w-full relative items-stretch'>
                     <SearchBar1 setResults={setResults} />
-                    {results && results.length > 0 && <SearchResultsList results={results}/>}
+                    {results && results?.results?.length > 0 && <SearchResultsList results={results}/>}
                 </div>         
 
                 <div className="navbar-end">

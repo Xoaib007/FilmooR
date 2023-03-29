@@ -5,6 +5,7 @@ import "./SearchBar.css";
 
 export const SearchBar1 = ({ setResults }) => {
   const [input, setInput] = useState("");
+  console.log(input)
 
   const fetchData = (value) => {
     fetch(`https://api.themoviedb.org/3/search/keyword?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${value}`)
