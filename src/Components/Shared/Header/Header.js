@@ -9,7 +9,6 @@ import { SearchResultsList } from './components/SearchResultsList';
 const Header = () => {
 
     const [results, setResults] = useState([]);
-    console.log(results)
 
     return (
         <div>

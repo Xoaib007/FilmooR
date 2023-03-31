@@ -20,7 +20,7 @@ export const KeywordPage = () => {
     queryFn: () => fetch(`https://api.themoviedb.org/3/search/person?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${keyword.name}`).then(res => res.json())
   })
 
-  console.log(movies, tv, person);
+  console.log(keyword,movies, tv, person);
 
   return (
     <div className='min-h-screen text-white mt-10 mx-60'>
