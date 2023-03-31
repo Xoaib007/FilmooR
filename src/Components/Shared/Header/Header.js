@@ -49,7 +49,7 @@ const Header = () => {
                 {/* Searchbar */}
 
                 <div className=' flex-col w-full relative items-stretch'>
-                    <SearchBar1 setResults={setResults} />
+                    <SearchBar1 setResults={setResults} setFocused={setFocused} />
                     {results && results?.results?.length > 0 && <SearchResultsList results={results} />}
                 </div>
 
