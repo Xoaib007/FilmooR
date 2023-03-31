@@ -10,9 +10,9 @@ export const KeywordPage = ({ query }) => {
     queryFn: () => fetch(`https://api.themoviedb.org/3/search/movie?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${keyword.name}`).then(res => res.json())
   })
 
-  const { data: person = [] } = useQuery({
+  const { data: tv = [] } = useQuery({
     queryKey: ['similars'],
-    queryFn: () => fetch(`https://api.themoviedb.org/3/search/movie?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${keyword.name}`).then(res => res.json())
+    queryFn: () => fetch(`https://api.themoviedb.org/3/search/tv?api_key=6d47a4eb4a550f0aec87d70e03ce12ae&query=${keyword.name}`).then(res => res.json())
   })
   
   const { data: movies = [] } = useQuery({
