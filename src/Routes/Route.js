@@ -52,7 +52,7 @@ const router= createBrowserRouter([
         {
             path: '/keyword/:id',
             element: <KeywordPage/>,
-            loader: ({params}) => fetch(`https://api.themoviedb.org/3/person/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
+            loader: ({params}) => fetch(`https://api.themoviedb.org/3/keyword/${params.id}?api_key=6d47a4eb4a550f0aec87d70e03ce12ae`)
 
         },
         {
