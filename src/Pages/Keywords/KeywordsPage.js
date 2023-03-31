@@ -7,7 +7,7 @@ export const KeywordPage = ({ query }) => {
 
   const { data: movies = [] } = useQuery({
     queryKey: ['similars'],
-    queryFn: () => fetch(`https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query=a`).then(res => res.json())
+    queryFn: () => fetch(`https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query=${keyword.name}`).then(res => res.json())
   })
 
   return (
