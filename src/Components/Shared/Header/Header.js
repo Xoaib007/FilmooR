@@ -10,6 +10,7 @@ const Header = () => {
 
     const [results, setResults] = useState([]);
     const [focused, setFocused] = useState(false);
+    console.log("focus:",focused);
 
     return (
         <div>
@@ -50,7 +51,7 @@ const Header = () => {
 
                 <div className=' flex-col w-full relative items-stretch'>
                     <SearchBar1 setResults={setResults} setFocused={setFocused} />
-                    {results && results?.results?.length > 0 && focused === true && <SearchResultsList results={results} />}
+                    {results && results?.results?.length > 0 && focused  && <SearchResultsList results={results} />}
                 </div>
 
                 <div className="navbar-end">
