@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 import "./SearchBar.css";
 
-export const SearchBar1 = ({ setResults }) => {
+export const SearchBar1 = ({ setResults, setFocused }) => {
   const [input, setInput] = useState("");
 
   const fetchData = (value) => {
