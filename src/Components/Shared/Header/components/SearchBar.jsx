@@ -26,8 +26,8 @@ export const SearchBar1 = ({ setResults, setFocused }) => {
         placeholder="Type to search..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
-        onFocus={setFocused(true)}
-        onBlur={setFocused(false)}
+        onFocus={()=>setFocused(true)}
+        onBlur={()=>setFocused(false)}
       />
     </div>
   );
