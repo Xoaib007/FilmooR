@@ -6,6 +6,5 @@ export const KeywordPage = ({query}) => {
     <div className='min-h-screen text-white mt-10 mx-60'>
         { query}
     </div>
-    
   );
 };
