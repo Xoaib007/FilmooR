@@ -32,14 +32,3 @@ export const SearchBar1 = ({ setResults, setFocused }) => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
